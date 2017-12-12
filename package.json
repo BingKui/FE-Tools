@@ -1,0 +1,23 @@
+{
+  "name": "fe-tools",
+  "version": "0.0.1",
+  "description": "前端基础代码库。提供常见的业务中的操作，封装成同一方法，方便后续使用个维护。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BingKui/FE-Tools.git"
+  },
+  "keywords": [
+    "FE",
+    "Javascript"
+  ],
+  "author": "kangbingkui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BingKui/FE-Tools/issues"
+  },
+  "homepage": "https://github.com/BingKui/FE-Tools#readme"
+}
