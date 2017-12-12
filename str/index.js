@@ -67,5 +67,5 @@ export const strRepeat = (str, count) => {
 // f: 需要替换的字符 string or array
 // r: 替换的字符 string
 export const strReplace = (str, f, r) => {
-
+    raRegExp = new RegExp(AFindText, "g");
 }
