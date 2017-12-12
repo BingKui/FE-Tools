@@ -1,3 +1,8 @@
+import { isArray } from '../arr';
+// 判断一个对象是否是字符串
+export const isString = (obj) => {
+    return typeof(obj) === 'string';
+}
 // 去除字符串空格
 // type: 1-所有空格  2-前后空格  3-前空格 4-后空格
 export const strTrim = (str, type = 1) => {
@@ -66,6 +71,21 @@ export const strRepeat = (str, count) => {
 // 字符串特殊次替换
 // f: 需要替换的字符 string or array
 // r: 替换的字符 string
-export const strReplace = (str, f, r) => {
-    raRegExp = new RegExp(AFindText, "g");
+export const strReplace = (str, f, r = '') => {
+    const _arrBool = isArray(f);
+    const _strBool = isString(f);
+    console.log(_arrBool);
+    console.log(_strBool);
+    if (_arrBool) {
+        for (let i = 0; i < f.length; i ++) {
+            const _regTemp = new RegExp(f[i], "g");
+            str = str.replace(_regTemp, r);
+        }
+        return str;
+    }
+    if (_strBool) {
+        const _reg = new RegExp(f, "g");
+        return str.replace(_reg, r);
+    }
+    return str;
 }
