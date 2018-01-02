@@ -69,3 +69,8 @@ export const strRepeat = (str, count) => {
 export const strReplace = (str, f, r) => {
     raRegExp = new RegExp(AFindText, "g");
 }
+
+// 返回一个字符在字符串中出现的次数
+export const strCount = (str, s) => {
+    return str.split(s).length - 1;
+}
