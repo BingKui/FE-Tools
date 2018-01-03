@@ -102,3 +102,9 @@ export const strReplace = (str, f, r = '') => {
 export const strCount = (str, s) => {
     return str.split(s).length - 1;
 }
+// 字符串数组拼接
+export const strJoint = (strArr) => {
+    return strArr.reduce((pre, cur) => {
+        return pre + cur;
+    });
+}
