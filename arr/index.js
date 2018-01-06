@@ -8,6 +8,18 @@ export const arrRemoveRepeat = (arr) => {
         return self.indexOf(item) === index;
     });
 }
+// 数组合并,不定参,可以是多个数组
+export const arrMerge = (...args) => {
+    let _result = [];
+    for (let item in args) {
+        _result = [..._result, ...item];
+    }
+    return _result;
+}
+// 数组合并,去重  支持数字,字符串
+export const arrMergeRemoveRepeat = (...args) => {
+    return arrRemoveRepeat(arrMerge(args));
+}
 // 数组顺序打乱
 export const arrUpset = (arr) => {
     return arr.sort(() => {
