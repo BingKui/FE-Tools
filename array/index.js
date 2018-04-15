@@ -8,6 +8,9 @@ export const arrRemoveRepeat = (arr) => {
         return self.indexOf(item) === index;
     });
 }
+export const arrRemoveRepeat2 = (arr) => {
+    return [...new Set(arr)];
+};
 // 数组合并,不定参,可以是多个数组
 export const arrMerge = (...args) => {
     let _result = [];
