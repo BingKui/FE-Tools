@@ -1,6 +1,6 @@
 // 检测是否是手机号
 export const isPhone = (num) => {
-    return /^1[3|4|5|7|8][0-9]{9}$/.test(num);
+    return /^1[3|4|5|7|8|9|6][0-9]{9}$/.test(num);
 }
 // 检测是否是固定电话
 export const isTel = (num) => {
@@ -32,5 +32,6 @@ export const pwdLevel = (pass) => {
     if (/[\.|-|_|~|,|?|\{|\}|\[|\]|\!|\@|\#|\$|\%]/.test(pass)) {
         _level++;
     }
+    return _level;
 }
 

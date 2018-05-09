@@ -83,8 +83,6 @@ export const strRepeat = (str, count) => {
 export const strReplace = (str, f, r = '') => {
     const _arrBool = isArray(f);
     const _strBool = isString(f);
-    console.log(_arrBool);
-    console.log(_strBool);
     if (_arrBool) {
         for (let i = 0; i < f.length; i ++) {
             const _regTemp = new RegExp(f[i], "g");
