@@ -27,6 +27,32 @@ export const strTrim = (str, type = 1) => {
     }
     return str.replace(reg, '');
 }
+
+/**
+ * @description 清除左右空格
+ */
+export const trim = (str)  => {
+    return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+/**
+ * @description 清除所有空格
+ */
+export const trimAll = (str) => {
+    return str.replace(/\s+/g, "");
+}
+/**
+ * @description 清除左空格
+ */
+export const trimLeft = (str) => {
+    return str.replace(/(^\s*)/g, "");
+}
+/**
+ * @description 清除右空格
+ */
+export const trimRight = (str) => {
+    return str.replace(/(\s*$)/g, "");
+}
+
 // 字符串大小写切换
 // type: 1-首字母大写 2-首页母小写 3-大小写转换 4-全部大写 5-全部小写
 /**

@@ -51,3 +51,26 @@ export const arrAvg = (arr) => {
 export const arrAppoint = (arr, s, e) => {
     return arr.slice(s, e);
 }
+
+// 降序返回数组（字符串）每个元素的出现次数
+export const arrGetCount = (arr) => {
+    let obj = {}, k, arr1 = []
+    //记录每一元素出现的次数
+    for (let i = 0, len = arr.length; i < len; i++) {
+        k = arr[i];
+        if (obj[k]) {
+            obj[k]++;
+        } else {
+            obj[k] = 1;
+        }
+    }
+    //保存结果{el-'元素'，count-出现次数}
+    for (let o in obj) {
+        arr1.push({el: o, count: obj[o]});
+    }
+    //排序（降序）
+    arr1.sort(function (n1, n2) {
+        return n2.count - n1.count
+    });
+    return arr1;
+}
